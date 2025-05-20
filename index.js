@@ -4,8 +4,8 @@ const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent]
 });
 
-const TOKEN = process.env.TOKEN;
-const CHANNEL_ID = process.env.CHANNEL_ID;
+const TOKEN = process.env.TOKEN; // هنا نقوم بقراءة المتغير TOKEN من البيئة
+const CHANNEL_ID = process.env.CHANNEL_ID; // هنا نقوم بقراءة المتغير CHANNEL_ID من البيئة
 
 const sentences = [
   'مرحبا! كيف حالك؟',
@@ -35,4 +35,5 @@ client.once('ready', () => {
   }, 15000);
 });
 
-client.login(TOKEN);
+client.login(TOKEN); // هنا نقوم باستخدام المتغير TOKEN لتسجيل الدخول
+
